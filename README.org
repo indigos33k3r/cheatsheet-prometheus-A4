@@ -47,7 +47,7 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | Exporter: [[https://github.com/prometheus/mysqld_exporter][Mysqld Exporter]]   | Monitor mysqld services                                                             |
 | Reference                   | [[https://prometheus.io/docs/instrumenting/exporters/][Link: Exporters And Integrations]], [[https://github.com/prometheus/prometheus/wiki/Default-port-allocations][Link: Default port allocations]]                    |
 
-[[https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4][https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/prometheus-overview.png]]
+[[https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4][https://raw.githubusercontent.com/dennyzhang/cheatsheet-prometheus-A4/master/prometheus-overview.png]]
 ** Prometheus Concepts
 | Name                        | Summary                                                                        |
 |-----------------------------+--------------------------------------------------------------------------------|
@@ -70,7 +70,7 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | kube-state-metrics http-metric | http://$kube_state_metric_svc:8080/metrics | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/kube-state-metrics-http-sample.txt][Link: kube-state-metrics-http-sample.txt]]      |
 | kube-state-metrics telemetry   | http://$kube_state_metric_svc:8081/metrics | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/kube-state-metrics-telemetry-sample.txt][Link: kube-state-metrics-telemetry-sample.txt]] |
 
-[[https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4][https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/prometheus-deployment.png]]
+[[https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4][https://raw.githubusercontent.com/dennyzhang/cheatsheet-prometheus-A4/master/prometheus-deployment.png]]
 ** Prometheus Query
 | Name                                                           | Command                                                   |
 |----------------------------------------------------------------+-----------------------------------------------------------|
