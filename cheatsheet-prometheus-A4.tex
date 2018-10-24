@@ -1,0 +1,132 @@
+% Created 2018-10-21 Sun 22:13
+% Intended LaTeX compiler: pdflatex
+\documentclass[8pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[margin=0.6in]{geometry}
+\usepackage[english, ]{babel}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Updated: \today}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\href{https://github.com/dennyzhang/cheatsheet.dennyzhang.com/tree/master/cheatsheet-prometheus-A4}{GitHub: https://github.com/dennyzhang/cheatsheet.dennyzhang.com/tree/master/cheatsheet-prometheus-A4}}
+\lhead{\href{https://cheatsheet.dennyzhang.com/cheatsheet-slack-A4}{Blog URL: https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4}}
+\author{Denny Zhang}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Denny Zhang},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={Cn}}
+\begin{document}
+
+\section[CheatSheet: Prometheus]{CheatSheet: Prometheus\hfill{}\textsc{Kubernetes}}
+\label{sec:orgb07d4f3}
+\begin{itemize}
+\item PDF Link: \href{https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/cheatsheet-prometheus-A4.pdf}{cheatsheet-prometheus-A4.pdf}, Category: \href{https://cheatsheet.dennyzhang.com/category/kubernetes/}{kubernetes}
+\item Blog URL: \url{https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4}
+\item Related posts: \href{https://cheatsheet.dennyzhang.com/cheatsheet-kubernetes-A4}{Kubectl CheatSheet}, \href{https://cheatsheet.dennyzhang.com/cheatsheet-kubernetes-yaml}{Kubernetes Yaml Templates}
+\end{itemize}
+
+File me \href{https://github.com/dennyzhang/cheatsheet-prometheus-A4/issues}{Issues} or star \href{https://github.com/DennyZhang/cheatsheet-prometheus-A4}{this repo}.
+
+See more CheatSheets from Denny: \href{https://github.com/topics/denny-cheatsheets}{\#denny-cheatsheets}
+\subsection{Prometheus Basic}
+\label{sec:orgbc00e11}
+\begin{center}
+\begin{tabular}{ll}
+Name & Command\\
+\hline
+Config file & \texttt{/etc/prometheus/prometheus.yml}\\
+Run Prometheus with docker & \texttt{docker run -p 9090:9090 prom/prometheus}, \texttt{http://localhost:9090}\\
+Query metric by api, instead of GUI & \texttt{curl http://localhost:9090/api/v1/query?query=container\_memory\_usage\_bytes}\\
+List alerts & \texttt{curl http://localhost:9093/api/v1/alerts}\\
+\end{tabular}
+\end{center}
+\subsection{Kubernetes Metrics Targets \& Samples}
+\label{sec:orgc3fa1a7}
+\begin{center}
+\begin{tabular}{lll}
+Name & Command & Sample Metrics\\
+\hline
+apiserver & \url{https://\$api\_server:443/metrics} & \\
+cadvisor & \url{http://\$node\_ip:10255/metrics/cadvisor} & \href{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/cadvisor-sample.txt}{cadvisor-sample.txt}\\
+node-exporter & \url{http://\$node\_ip:9100/metrics} & \href{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/node-exporter-sample.txt}{node-exporter-sample.txt}\\
+kubelet & \url{http://\$kubelet\_ip:10255/metrics} & \href{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/kubelet-sample.txt}{kubelet-sample.txt}\\
+kube-dns & \url{http://\$kube\_dns\_addon\_ip:10054/metrics} & \href{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/kube-dns-sample.txt}{kube-dns-sample.txt}\\
+kube-state-metrics http-metric & \url{http://\$kube\_state\_metric\_svc:8080/metrics} & \href{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/kube-state-metrics-http-sample.txt}{kube-state-metrics-http-sample.txt}\\
+kube-state-metrics telemetry & \url{http://\$kube\_state\_metric\_svc:8081/metrics} & \href{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/kube-state-metrics-telemetry-sample.txt}{kube-state-metrics-telemetry-sample.txt}\\
+\end{tabular}
+\end{center}
+
+\href{https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4}{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/prometheus-deployment.png}
+\subsection{Prometheus Concepts}
+\label{sec:orga31aee0}
+\begin{center}
+\begin{tabular}{ll}
+Name & Command\\
+\hline
+Job & \\
+Instance & \\
+Handler & \\
+Target & \\
+Rule & \\
+Alertmanager & \\
+Exporter & \\
+\end{tabular}
+\end{center}
+\subsection{Prometheus Components}
+\label{sec:orgb115de9}
+\begin{center}
+\begin{tabular}{ll}
+Name & Command\\
+\hline
+\href{http://opentsdb.net/}{OpenTSDB} & The Scalable Time Series Database\\
+\end{tabular}
+\end{center}
+
+\href{https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4}{https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/cheatsheet-prometheus-A4/prometheus-workflow.png}
+\subsection{Prometheus Query}
+\label{sec:orgb7e6fdb}
+\begin{center}
+\begin{tabular}{ll}
+Name & Command\\
+\hline
+Reference & \href{https://prometheus.io/docs/prometheus/latest/querying/basics/}{Link: query}\\
+Find metric by name+job+group & somemetric\{job="prometheus",group="canary"\}\\
+\end{tabular}
+\end{center}
+\subsection{Prometheus Aggregration}
+\label{sec:org9d058ac}
+\begin{center}
+\begin{tabular}{ll}
+Name & Command\\
+\hline
+count & \\
+sum & \\
+min & \\
+max & \\
+counter & \\
+avg & \\
+\end{tabular}
+\end{center}
+\subsection{More Resources}
+\label{sec:org72bf4f3}
+License: Code is licensed under \href{https://www.dennyzhang.com/wp-content/mit\_license.txt}{MIT License}.
+\end{document}
