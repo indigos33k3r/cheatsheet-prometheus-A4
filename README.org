@@ -38,7 +38,7 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | [[https://github.com/prometheus/prometheus][Prometheus server]]           | Scrapes and store time series data. It uses pull model, instead of push             |
 | [[https://github.com/prometheus/pushgateway][Push gateway]]                | Support short-lived jobs. Persists the most recent push of metrics from batch jobs. |
 | [[https://github.com/prometheus/alertmanager][Alertmanager]]                | Handle alerts                                                                       |
-| Client libraries            | Instrument application code. [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/prometheus-python-example.py][Link: prometheus-python-example.py]]                     |
+| Client libraries            | Instrument application code. [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/prometheus-python-example.py][Link: prometheus-python-example.py]]                     |
 | Special-purpose exporters   | Get metrics for all kinds of services, like HAProxy, StatsD, Graphite, etc          |
 | Exporter: [[https://github.com/prometheus/node_exporter][Node Exporter]]     | Monitor machine resources utilizations                                              |
 | Exporter: [[https://github.com/prometheus/blackbox_exporter][Blackbox Exporter]] | Blackbox prober exporter                                                            |
@@ -63,12 +63,12 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | Name                           | Command                                    | Sample Metrics                                |
 |--------------------------------+--------------------------------------------+-----------------------------------------------|
 | apiserver                      | https://$api_server:443/metrics            |                                               |
-| cadvisor                       | http://$node_ip:10255/metrics/cadvisor     | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/cadvisor-sample.txt][Link: cadvisor-sample.txt]]                     |
-| node-exporter                  | http://$node_ip:9100/metrics               | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/node-exporter-sample.txt][Link: node-exporter-sample.txt]]                |
-| kubelet                        | http://$kubelet_ip:10255/metrics           | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/kubelet-sample.txt][Link: kubelet-sample.txt]]                      |
-| kube-dns                       | http://$kube_dns_addon_ip:10054/metrics    | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/kube-dns-sample.txt][Link: kube-dns-sample.txt]]                     |
-| kube-state-metrics http-metric | http://$kube_state_metric_svc:8080/metrics | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/kube-state-metrics-http-sample.txt][Link: kube-state-metrics-http-sample.txt]]      |
-| kube-state-metrics telemetry   | http://$kube_state_metric_svc:8081/metrics | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/kube-state-metrics-telemetry-sample.txt][Link: kube-state-metrics-telemetry-sample.txt]] |
+| cadvisor                       | http://$node_ip:10255/metrics/cadvisor     | [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/cadvisor-sample.txt][Link: cadvisor-sample.txt]]                     |
+| node-exporter                  | http://$node_ip:9100/metrics               | [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/node-exporter-sample.txt][Link: node-exporter-sample.txt]]                |
+| kubelet                        | http://$kubelet_ip:10255/metrics           | [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/kubelet-sample.txt][Link: kubelet-sample.txt]]                      |
+| kube-dns                       | http://$kube_dns_addon_ip:10054/metrics    | [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/kube-dns-sample.txt][Link: kube-dns-sample.txt]]                     |
+| kube-state-metrics http-metric | http://$kube_state_metric_svc:8080/metrics | [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/kube-state-metrics-http-sample.txt][Link: kube-state-metrics-http-sample.txt]]      |
+| kube-state-metrics telemetry   | http://$kube_state_metric_svc:8081/metrics | [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/kube-state-metrics-telemetry-sample.txt][Link: kube-state-metrics-telemetry-sample.txt]] |
 
 [[https://cheatsheet.dennyzhang.com/cheatsheet-prometheus-A4][https://raw.githubusercontent.com/dennyzhang/cheatsheet-prometheus-A4/master/prometheus-deployment.png]]
 ** Prometheus Query
@@ -80,7 +80,7 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | The avg network traffic received per second, over the last min | rate(node_network_receive_bytes_total[1m])                |
 | counter                                                        | It only goes up (and resets), counts something            |
 | gauge                                                          | It goes up and down, snapshot of state                    |
-| topk query                                                     | [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/blob/master/cheatsheet-prometheus-A4/query-topk.txt][Link: query-topk.txt]]                                      |
+| topk query                                                     | [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/query-topk.txt][Link: query-topk.txt]]                                      |
 | aggregate                                                      |                                                           |
 | join                                                           |                                                           |
 | cut                                                            |                                                           |

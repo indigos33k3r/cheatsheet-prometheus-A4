@@ -7,8 +7,7 @@ topk(5,
    )
 )
 
-# 10 highest read rates per second
-
+# Example: 10 highest read rates per second
 topk(10,
   sum by(job, keyspace, columnfamily) (
       rate(cassandra_columnfamily_readlatency[5m])
