@@ -24,14 +24,15 @@ File me [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/issues][Issues]
 
 See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][#denny-cheatsheets]]
 ** Prometheus Commands
-| Name                                             | Command                                                                                                      |
-|--------------------------------------------------+--------------------------------------------------------------------------------------------------------------|
-| Run Prometheus with docker                       | =docker run -p 9090:9090 prom/prometheus=, =http://localhost:9090/graph=, =http://localhost:9090/metrics=    |
-| Run cadvisor to get metrics for local containers | =docker run -v /var/run:/var/run -v /sys:/sys -p 8080:8080 google/cadvisor=, =http://localhost:8080/metrics= |
-| Prometheus Config file                           | =/etc/prometheus/prometheus.yml=                                                                             |
-| Query metric by api, instead of GUI              | =curl http://localhost:9090/api/v1/query?query=container_memory_usage_bytes=                                 |
-| List alerts                                      | =curl http://localhost:9093/api/v1/alerts=                                                                   |
-| Prometheus Online Demo                           | [[https://demo.cloudalchemy.org/][Live demo from CloudAlchemy]]                                                                                  |
+| Name                                          | Command                                                                                                                |
+|-----------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
+| Run Prometheus with docker                    | =docker run -p 9090:9090 prom/prometheus=, =http://localhost:9090/graph=, =http://localhost:9090/metrics=              |
+| Run cadvisor to get local containers' metrics | =docker run -v /var/run:/var/run -v /sys:/sys -p 8080:8080 google/cadvisor=, =http://localhost:8080/metrics=           |
+| Prometheus Config file                        | =/etc/prometheus/prometheus.yml=                                                                                       |
+| Query metric by api, instead of GUI           | =curl http://localhost:9090/api/v1/query?query=container_memory_usage_bytes=                                           |
+| List alerts                                   | =curl http://localhost:9093/api/v1/alerts=                                                                             |
+| Prometheus footprint                          | alertmanager(15MB RAM), grafana(30MB), node-exporter(10MB), prometheus(350MB). See more [[https://github.com/dennyzhang/cheatsheet-prometheus-A4/blob/master/prometheus-footprint.txt][Link: prometheus-footprint.txt]] |
+| Prometheus Online Demo                        | [[https://demo.cloudalchemy.org/][Live demo from CloudAlchemy]]                                                                                            |
 ** Prometheus Components
 | Name                        | Command                                                                             |
 |-----------------------------+-------------------------------------------------------------------------------------|
