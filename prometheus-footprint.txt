@@ -1,4 +1,4 @@
-  kubectl top pod -n prometheus --containers=true                                                                                            
+  kubectl top pod -n prometheus --containers=true
 POD                                               NAME                       CPU(cores)   MEMORY(bytes)
 prometheus-1-alertmanager-0                       prometheus-alertmanager    1m           15Mi
 prometheus-1-alertmanager-1                       prometheus-alertmanager    0m           11Mi
