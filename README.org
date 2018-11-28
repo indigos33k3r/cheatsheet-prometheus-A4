@@ -1045,3 +1045,4 @@ https://github.com/juliusv/prometheus_workshop/blob/master/example_golang/server
 * TODO draw a picture: job/instance/target                         :noexport:
 https://prometheus.io/docs/concepts/jobs_instances/
 * TODO [#A] prometheus vs vmware wavefront                         :noexport:
+* TODO prometheus metrics vs kubernetes open metrics               :noexport:
